@@ -1,6 +1,13 @@
 require 'rubygems'
-require 'httparty'
+require 'rest-client'
+require 'json'
 
+class Bitcoin
+  @url
 
-response = HTTParty.get('http://api.stackexchange.com/2.2/questions?site=stackoverflow')
-puts response.body, response.code, response.message, response.headers.inspect
+  def initialize()
+    response = RestClient.get(@url)
+    return response.body
+  end
+
+end
