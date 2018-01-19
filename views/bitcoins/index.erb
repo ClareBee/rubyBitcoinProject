@@ -1,3 +1,4 @@
+
 <section>
 
   <div>
@@ -8,11 +9,9 @@
       <th>Name</th>
       <th></th>
     </tr>
-
-      <!-- <% @bitcoins %> -->
-      <%= @bitcoins %>
       <% @bitcoins.each do |bitcoin| %>
         <%= bitcoin["name"] %>
+        <%= Time.at(bitcoin["last_updated"].to_i).to_datetime %>
         <% end %>
   </table>
   </div>
