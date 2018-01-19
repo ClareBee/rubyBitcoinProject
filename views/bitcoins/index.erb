@@ -8,11 +8,26 @@
     <tr>
       <th>Name</th>
       <th></th>
+      <th>Symbol</th>
+      <th></th>
+      <th>Rank</th>
+      <th></th>
+      <th>Price US$</th>
+      <th></th>
+      <th>Last update</th>
     </tr>
       <% @bitcoins.each do |bitcoin| %>
-        <%= bitcoin["name"] %>
-        <%= Time.at(bitcoin["last_updated"].to_i).to_datetime %>
-        <% end %>
+    <tr>
+      <td><%= bitcoin["name"] %></td>
+      <td></td>
+      <td><%= bitcoin["symbol"]%></td>
+      <td></td>
+      <td><%= bitcoin["rank"]%></td>
+      <td></td>
+      <td><%= bitcoin["price_usd"]%></td>
+      <td></td>
+      <td><%= Time.at(bitcoin["last_updated"].to_i).to_datetime %></td>
+      <% end %>
   </table>
   </div>
 
