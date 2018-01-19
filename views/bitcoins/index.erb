@@ -8,8 +8,12 @@
       <th>Name</th>
       <th></th>
     </tr>
-    <%= @bitcoins %>
 
+      <!-- <% @bitcoins %> -->
+      <%= @bitcoins %>
+      <% @bitcoins.each do |bitcoin| %>
+        <%= bitcoin["name"] %>
+        <% end %>
   </table>
   </div>
 
