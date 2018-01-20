@@ -1,4 +1,13 @@
 .high {
+  background: green;
+  color: white;
+}
+
+.prices {
+  float: right;
+}
+
+.low {
   background: red;
   color: white;
 }

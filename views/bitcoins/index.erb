@@ -17,14 +17,14 @@
       <th>Last update</th>
     </tr>
       <% @bitcoins.each do |bitcoin| %>
-    <tr class="<%= bitcoin["price_usd"].to_i > 1000 ? 'high' : '' %>">
+    <tr class="<%= bitcoin["price_usd"].to_i > 1000 ? 'high' : 'normal' %>">
       <td><%= bitcoin["rank"]%></td>
       <td></td>
       <td><%= bitcoin["name"] %></td>
       <td></td>
       <td><%= bitcoin["symbol"]%></td>
       <td></td>
-      <td><%= bitcoin["price_usd"]%></td>
+      <td class="<%= bitcoin["price_usd"].to_i < 1 ? 'low prices' : 'prices'%>"><%= "%.4f" % bitcoin["price_usd"]%></td>
       <td></td>
       <% time = Time.at(bitcoin["last_updated"].to_i) %>
       <td><%= time.strftime("%k:%M %d/%m/%Y") %></td>

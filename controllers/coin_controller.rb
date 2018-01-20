@@ -22,10 +22,10 @@ end
 #  end
 
 #update
-get '/coins/:id/edit' do
-  @coin = Coin.find(params['id'])
-  erb( :"coins/edit" )
-end
+# get '/coins/:id/edit' do
+#   @coin = Coin.find(params['rank'])
+#   erb( :"coins/edit" )
+# end
 
 post '/coins/:id' do
   @coin = Coin.new(params)
