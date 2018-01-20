@@ -1,11 +1,29 @@
 
 
 <h1>graphs</h1>
+<% @coins = [] %>
+<% @bitcoins.each do |bitcoin| %>
+<% @coins << bitcoin["price_usd"].to_i %>
+<% end %>
 
-<div id="container">
+<div id="container" style="width: 500px; height: 400px;" value="<%= @coins[0] %>">
 <script>
     anychart.onDocumentReady(function() {
-        var chart = anychart.fromJson(<%= chartData %>);
+        var coindata = document.getElementById("container").value;
+        console.log(coindata);
+        var chart = anychart.bar(
+          [
+            [<%= @coins[0] %>, <%= @coins[0].to_i %>],
+            ['Product B', <%= @coins[1].to_i  %>],
+            ['Product C', <%= @coins[2].to_i  %>],
+            ['Product D', <%= @coins[3].to_i %>],
+            ['Product E', <%= @coins[4].to_i  %>]
+          ]);
+
+        // set container id for the chart
+        chart.container('container');
+
+        // initiate chart drawing
         chart.draw();
     });
 </script>
