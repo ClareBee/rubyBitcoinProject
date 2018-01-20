@@ -7,7 +7,9 @@
 <% @coins << bitcoin["price_usd"].to_i %>
 <% @names << bitcoin["name"].to_s %>
 <% end %>
-<h2><%=@names[0] %> is out in front, selling at $<%=@coins[0] %>, but let's look at the other major coins out there!</h2>
+<h2><%=@names[0] %> is out in front, selling at $<%=@coins[0] %>/coin</h2>
+<br />
+<h2>But let's look at the other major coins out there!</h2>
 <div id="container" style="width: 500px; height: 400px;">
 <script>
     anychart.onDocumentReady(function() {
@@ -25,9 +27,10 @@
 
         // set container id for the chart
         chart.container('container');
-
         // initiate chart drawing
         chart.draw();
+        chart.yAxis().title('Price in USD');
+        chart.xAxis().title('Top Ranked Coins');
     });
 </script>
 </div>
