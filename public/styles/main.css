@@ -2,7 +2,6 @@
   background: green;
   color: white;
 }
-
 .prices {
   float: right;
 }
@@ -14,4 +13,12 @@
 
 path{
   fill: red important!;
+}
+
+table {
+  margin-left: 100px;
+  overflow: scroll;
+}
+#first-page {
+  overflow: hidden;
 }
