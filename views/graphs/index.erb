@@ -1,36 +1,48 @@
 
 
 <h1>The Key Players</h1>
+
 <% @coins = [] %>
 <% @names = [] %>
 <% @bitcoins.each do |bitcoin| %>
-<% @coins << bitcoin["price_usd"].to_i %>
-<% @names << bitcoin["name"].to_s %>
+<%    @coins << bitcoin["price_usd"].to_i %>
+<%    @names << bitcoin["name"].to_s %>
 <% end %>
-<h2><%=@names[0] %> is out in front, selling at $<%=@coins[0] %>/coin</h2>
-<br />
-<h2>But let's look at the other major coins out there!</h2>
-<div id="container" style="width: 500px; height: 400px;">
-<script>
-    anychart.onDocumentReady(function() {
-        var chart = anychart.bar(
-          [
-            // ["<%= @names[0].to_s %>", <%= @coins[0].to_i %>],
-            ["<%= @names[1].to_s %>", <%= @coins[1].to_i  %>],
-            ["<%= @names[2].to_s %>", <%= @coins[2].to_i  %>],
-            ["<%= @names[3].to_s %>", <%= @coins[3].to_i %>],
-            ["<%= @names[4].to_s %>", <%= @coins[4].to_i  %>],
-            ["<%= @names[5].to_s %>", <%= @coins[5].to_i  %>],
-            ["<%= @names[6].to_s %>", <%= @coins[6].to_i  %>],
-            ["<%= @names[7].to_s %>", <%= @coins[7].to_i  %>]
-          ]);
 
-        // set container id for the chart
-        chart.container('container');
-        // initiate chart drawing
-        chart.draw();
-        chart.yAxis().title('Price in USD');
-        chart.xAxis().title('Top Ranked Coins');
-    });
-</script>
+<h2><%=@names[0] %> is out in front, selling at <span>$<%=@coins[0] %>/coin</span></h2>
+<br />
+<h3>See how the rest of the top 10 ranked cryptocurrencies are doing!</h3>
+
+<div id="container" style="width: 500px; height: 400px;">
+
+  <script type="text/javascript">
+      anychart.onDocumentReady(function() {
+
+          var chart = anychart.bar(
+            [
+              //refactor with for loop?
+              // ["<%= @names[0].to_s %>", <%= @coins[0].to_i %>],
+              ["<%= @names[1].to_s %>", <%= @coins[1].to_i  %>],
+              ["<%= @names[2].to_s %>", <%= @coins[2].to_i  %>],
+              ["<%= @names[3].to_s %>", <%= @coins[3].to_i %>],
+              ["<%= @names[4].to_s %>", <%= @coins[4].to_i  %>],
+              ["<%= @names[5].to_s %>", <%= @coins[5].to_i  %>],
+              ["<%= @names[6].to_s %>", <%= @coins[6].to_i  %>],
+              ["<%= @names[7].to_s %>", <%= @coins[7].to_i  %>],
+              ["<%= @names[8].to_s %>", <%= @coins[8].to_i  %>],
+              ["<%= @names[9].to_s %>", <%= @coins[9].to_i  %>],
+            ]);
+
+          // sets container id for the chart
+          chart.container('container');
+          // initiates drawing and sets details
+          chart.title("Cryptocurrency Prices");
+
+          chart.draw();
+          chart.yAxis().title('Price in USD');
+          chart.xAxis().title('Top Ranked Coins');
+          chart.tooltip().format('${%Value}');
+      });
+  </script>
+
 </div>

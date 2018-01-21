@@ -11,3 +11,7 @@
   background: red;
   color: white;
 }
+
+path{
+  fill: red important!;
+}

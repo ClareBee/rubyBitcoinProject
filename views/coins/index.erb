@@ -2,21 +2,20 @@
 <section>
 
   <div>
-  <h1>Your favourite coins</h1>
+    <h1>Your Favourite Cryptocurrencies</h1>
+    <h2>Keep a record of ones to watch out for</h2>
 
-  <table>
-    <tr>
-      <th>Name</th>
-      <th></th>
-    </tr>
+
+
+    <ul>Name
+
     <% for coin in @coins %>
-    <tr>
-      <td><a href="/coins/<%=coin.id%>"><%= coin.name %></a></td>
-      <td>|</td>
-    </tr>
-    <% end %>
 
-  </table>
+    <li><%= coin.name %></li>
+    <% end %>
+    
+    </ul>
+
   </div>
 
 </section>
