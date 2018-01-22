@@ -16,6 +16,9 @@
   box-shadow: 2px 14px 18px 3px rgba(0,0,0,0.4);
 
 }
+#table-title {
+  border-bottom: 6px solid #F21B3F;
+}
 th {
   font-size: 20px;
   line-height: 2em;
@@ -48,7 +51,6 @@ table, th, td {
   text-align: right;
 }
 
-
 #first-page {
   overflow: hidden;
 }
@@ -73,6 +75,7 @@ table, th, td {
   border: 3px solid #4E7DE7;
   border-radius: 6px;
   padding: 4px;
+  margin: 0;
 }
 
 #coin-layout {
@@ -86,10 +89,10 @@ fieldset {
   width: 80%;
   font-size: 40px;
   padding: 10% 5% 10% 25%;
+  background: #FBFBFB;
   border: 4px solid #5171EA;
   border-radius: 5px;
   box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.3);
-
 }
 #name  {
   font-size: 30px;
@@ -110,8 +113,17 @@ fieldset {
   transform: scale(0.96);
 }
 
+#added-coins-layout {
+  height: 100vh;
+  background-image: url('/images/laptop.jpg');
+  background-size: contain;
+}
+
 #added-coins {
-  margin-left: 25%;
+  position: absolute;
+  z-index: 5;
+  background: white;
+  margin-left: 15%;
   margin-top: 4%;
   margin-right: 20%;
   padding: 15px;
@@ -119,15 +131,21 @@ fieldset {
   border-radius: 5px;
   box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.3);
 }
-#comment {
+#favs  {
+  text-decoration: underline;
+  text-decoration-color: #F64E0F;
+}
+.comment {
   color: gray;
   margin-bottom: 30px;
 }
+
 #added-coins-list li {
   border-radius: 3px;
   transition: all .2s ease-in-out;
   line-height: 2.5em;
+  list-style: none;
 }
 #added-coins-list li:hover {
-  background-color: lightgray;
+  background-color: #EBEBEB;
 }

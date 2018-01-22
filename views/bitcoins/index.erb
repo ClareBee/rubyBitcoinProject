@@ -5,6 +5,9 @@
     <div class="container">
       <table id="bitcoin-table">
         <tr>
+          <th id="table-title" colspan="5">Top 100 Cryptocurrencies</th>
+        </tr>
+        <tr>
           <th>Rank</th>
 
           <th>Name</th>
@@ -25,7 +28,7 @@
           <td><%= bitcoin["symbol"]%></td>
 
           <td class="<%= bitcoin["price_usd"].to_i < 1 ? 'low prices' : 'prices'%>"><%= "%.4f" % bitcoin["price_usd"]%></td>
-      
+
           <% time = Time.at(bitcoin["last_updated"].to_i) %>
           <td class="time"><%= time.strftime("%k:%M %d/%m/%Y") %></td>
           <% end %>
