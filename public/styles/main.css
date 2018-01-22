@@ -63,7 +63,8 @@ table, th, td {
   margin-top: 8%;
   margin-left: 15%;
   margin-right: 15%;
-  padding: 10px 25px 0 25px;
+  margin-bottom: 10%;
+  padding: 10px 25px 30px 25px;
   box-shadow: 2px 14px 18px 3px rgba(0,0,0,0.4);
 }
 #top-price {
