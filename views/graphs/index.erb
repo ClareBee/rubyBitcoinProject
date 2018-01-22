@@ -1,6 +1,7 @@
 
-
-<h1>The Key Players</h1>
+<section id="graph-layout">
+  <h1>The Top 10 Key Players</h1>
+  <p>Ranked by circulating supply</p>
 
 <% @coins = [] %>
 <% @names = [] %>
@@ -9,14 +10,13 @@
 <%    @names << bitcoin["name"].to_s %>
 <% end %>
 
-<h2><%=@names[0] %> is out in front, selling at <span>$<%=@coins[0] %>/coin</span></h2>
-<br />
-<h3>See how the rest of the top 10 ranked cryptocurrencies are doing!</h3>
+  <h2><%=@names[0] %> is out in front, selling at <span id="price">$<%=@coins[0] %>/coin</span></h2>
+  <h3>See how the rest are doing:</h3>
 
-<div id="container" style="max-width: 70%; height: 400px;">
+  <div id="container" style="max-width: 70%; height: 400px;">
 
-  <script type="text/javascript">
-      anychart.onDocumentReady(function() {
+    <script type="text/javascript">
+        anychart.onDocumentReady(function() {
 
           var data =
             [
@@ -40,7 +40,7 @@
           chart.xAxis().title('Top Ranked Coins');
           chart.tooltip().format('${%Value}');
 
-      });
-  </script>
-
-</div>
+        });
+      </script>
+    </div>
+</section>

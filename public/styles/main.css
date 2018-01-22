@@ -1,3 +1,9 @@
+
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 .high {
   background: green;
   color: white;
@@ -11,14 +17,15 @@
   color: white;
 }
 
-path{
-  fill: red important!;
-}
-
 table {
   margin-left: 100px;
   overflow: scroll;
 }
 #first-page {
   overflow: hidden;
+}
+
+#graph-layout {
+  margin: 10px 50px 0 50px;
+  padding: 10px 25px 0 25px;
 }
