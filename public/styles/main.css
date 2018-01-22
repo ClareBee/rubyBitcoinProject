@@ -1,31 +1,133 @@
 
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+* {
+  font-family: 'Lato', sans-serif;
 }
+.container{
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: center;
+}
+#bitcoin-table {
+  width: 60%;
+  margin-left: 100px;
+  overflow: scroll;
+  border-radius: 5px;
+  background-color: #F0F3FF;
+  box-shadow: 2px 14px 18px 3px rgba(0,0,0,0.4);
+
+}
+th {
+  font-size: 20px;
+  line-height: 2em;
+  background-color: #5171EA;
+  color: white;
+}
+table, th, td {
+   border: 1px solid black;
+   border-collapse: collapse;
+   padding: 8px;
+}
+
 .high {
   background: green;
   color: white;
 }
 .prices {
-  float: right;
+  text-align: right;
 }
 
 .low {
   background: red;
   color: white;
 }
-
-table {
-  margin-left: 100px;
-  overflow: scroll;
+.name {
+  font-weight: bold;
+  font-size: 20px;
 }
+.time {
+  text-align: right;
+}
+
+
 #first-page {
   overflow: hidden;
 }
 
 #graph-layout {
-  margin: 10px 50px 0 50px;
+  margin-top: 1%;
+  margin-left: 15%;
+  margin-right: 15%;
   padding: 10px 25px 0 25px;
+  box-shadow: 2px 14px 18px 3px rgba(0,0,0,0.4);
+}
+#top-price {
+  display: table inline;
+  border: 3px solid #FC4104;
+  margin-left: 2px;
+  padding: 2px;
+  border-radius: 6px;
+}
+#graph-title {
+  font-size: 2rem;
+  display: table;
+  border: 3px solid #4E7DE7;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+#coin-layout {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#coin-form {
+  padding: 20px;
+}
+fieldset {
+  width: 80%;
+  font-size: 40px;
+  padding: 10% 5% 10% 25%;
+  border: 4px solid #5171EA;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.3);
+
+}
+#name  {
+  font-size: 30px;
+  border-radius: 5px;
+}
+.btn-submit, .btn-delete {
+  font-size: 20px;
+  border-radius: 8px;
+  color: white;
+  background-color: #FC4104;
+  padding: 10px;
+  box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.3);
+  transition: all .3s ease-in;
+}
+.btn-submit:hover {
+  background-color: #FC4104;
+  opacity: 0.8;
+  transform: scale(0.96);
+}
+
+#added-coins {
+  margin-left: 25%;
+  margin-top: 4%;
+  margin-right: 20%;
+  padding: 15px;
+  border: 4px solid #5171EA;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.3);
+}
+#comment {
+  color: gray;
+  margin-bottom: 30px;
+}
+#added-coins-list li {
+  border-radius: 3px;
+  transition: all .2s ease-in-out;
+  line-height: 2.5em;
+}
+#added-coins-list li:hover {
+  background-color: lightgray;
 }

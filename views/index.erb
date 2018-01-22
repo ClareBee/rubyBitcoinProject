@@ -1,21 +1,49 @@
 <style>
 
-html {
-  margin: 0;
-  padding: 0;
-}
-#city {
-  background-image: url('/images/cityscape.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 80vh;
-}
-.box {
-  width: 100%;
-}
+  html {
+    margin: 0;
+    padding: 0;
+    background: #001E4D;
+  }
+  img {
+    border: 0;
+  }
+  #city {
+    background-image: url('/images/cityscape.jpg');
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 85vh;
+  }
+  .box {
+    width: 100%;
+    background-color: #4E7DE7;
+  }
+  #title-text{
+    text-align: center;
+    position: fixed;
+    top: 30%;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 2px 14px 18px 3px rgba(0,0,0,0.4);
+  }
+  #title {
+    font-size: 4rem;
+  }
+  #subtitle {
+    color: grey;
+  }
 </style>
 
 <div class="first-page">
-    <div class="box"><img id="city"></a></div>
+    <div class="box">
+      <img id="city">
+      <div id="title-text">
+        <h1 id="title">Cryptonite</h1>
+        <p id="subtitle">Keep track of the coins</p>
+      </div>
+    </div>
 </div>

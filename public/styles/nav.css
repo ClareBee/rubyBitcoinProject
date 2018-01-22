@@ -11,7 +11,7 @@
   padding: 0;
   display: flex;
   justify-content: space-around;
-  background: #D0CDD7;
+  background: #4E7DE7;
 }
 
 .navbar a {
@@ -20,10 +20,12 @@
   text-decoration: none;
   text-align: center;
   padding: 1rem;
+  transition: all .2s ease-in-out;
+
 }
 
 .navbar a:hover {
-  background: white;
+  background: #D2DBFC;
 }
 
 @media all and (max-width: 600px) {

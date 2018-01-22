@@ -31,16 +31,25 @@ class Coin
     return results.map { |coin| Coin.new( coin )}
   end
 
-  def self.delete_all()
-    sql = "DELETE FROM coins;"
-    values = []
-    SqlRunner.run( sql, values )
+# find coin by id
+  def self.find( id )
+    sql = "SELECT * FROM coins
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run( sql, values )
+    return Coin.new( results.first )
   end
 
-
+# delete coin by id
   def delete()
     sql = "DELETE FROM coins WHERE id = $1;"
     values = [@id]
+    SqlRunner.run( sql, values )
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM coins;"
+    values = []
     SqlRunner.run( sql, values )
   end
 

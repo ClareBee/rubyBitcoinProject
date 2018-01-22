@@ -1,6 +1,6 @@
 
 <section id="graph-layout">
-  <h1>The Top 10 Key Players</h1>
+  <h1 id="graph-title">The Top 10 Key Players</h1>
   <p>Ranked by circulating supply</p>
 
 <% @coins = [] %>
@@ -10,10 +10,10 @@
 <%    @names << bitcoin["name"].to_s %>
 <% end %>
 
-  <h2><%=@names[0] %> is out in front, selling at <span id="price">$<%=@coins[0] %>/coin</span></h2>
+  <h2><%=@names[0] %> is out in front, selling at <span id="top-price">$<%=@coins[0] %>/coin</span></h2>
   <h3>See how the rest are doing:</h3>
 
-  <div id="container" style="max-width: 70%; height: 400px;">
+  <div id="container" style="width: 100%; height: 400px;">
 
     <script type="text/javascript">
         anychart.onDocumentReady(function() {
@@ -29,8 +29,10 @@
 
           chart = anychart.bar();
           var series = chart.bar(data);
-          series.normal().fill("red", 0.3);
-          series.normal().stroke("red");
+          series.normal().fill("#FC4104", 0.7);
+          series.normal().stroke("#FC4104");
+          series.hovered().fill("#5171EA", 0.5);
+
           // sets container id for the chart
           chart.container('container');
           // initiates drawing and sets details

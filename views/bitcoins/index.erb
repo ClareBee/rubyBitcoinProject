@@ -1,36 +1,34 @@
 
 <section>
 
-  <div>
-  <h1>Bitcoins</h1>
-  <h2>Data courtsey of <a target="_blank" href="https://coinmarketcap.com/api/">CoinMarketCap</a></h2>
-  <table>
-    <tr>
-      <th>Rank</th>
-      <th></th>
-      <th>Name</th>
-      <th></th>
-      <th>Symbol</th>
-      <th></th>
-      <th>Price US$</th>
-      <th></th>
-      <th>Last update</th>
-    </tr>
+    <h2>Data courtesy of <a target="_blank" href="https://coinmarketcap.com/api/">CoinMarketCap</a></h2>
+    <div class="container">
+      <table id="bitcoin-table">
+        <tr>
+          <th>Rank</th>
 
-    <% @bitcoins.each do |bitcoin| %>
-    <tr class="<%= bitcoin["price_usd"].to_i > 1000 ? 'high' : 'normal' %>">
-      <td><%= bitcoin["rank"]%></td>
-      <td></td>
-      <td><%= bitcoin["name"] %></td>
-      <td></td>
-      <td><%= bitcoin["symbol"]%></td>
-      <td></td>
-      <td class="<%= bitcoin["price_usd"].to_i < 1 ? 'low prices' : 'prices'%>"><%= "%.4f" % bitcoin["price_usd"]%></td>
-      <td></td>
-      <% time = Time.at(bitcoin["last_updated"].to_i) %>
-      <td><%= time.strftime("%k:%M %d/%m/%Y") %></td>
-      <% end %>
-  </table>
-  </div>
+          <th>Name</th>
 
+          <th>Symbol</th>
+
+          <th class="price-col">Price US$</th>
+
+          <th>Last update</th>
+        </tr>
+
+        <% @bitcoins.each do |bitcoin| %>
+        <tr class="<%= bitcoin["price_usd"].to_i > 1000 ? 'high' : 'normal' %>">
+          <td><%= bitcoin["rank"]%></td>
+
+          <td class="name"><%= bitcoin["name"] %></td>
+
+          <td><%= bitcoin["symbol"]%></td>
+
+          <td class="<%= bitcoin["price_usd"].to_i < 1 ? 'low prices' : 'prices'%>"><%= "%.4f" % bitcoin["price_usd"]%></td>
+      
+          <% time = Time.at(bitcoin["last_updated"].to_i) %>
+          <td class="time"><%= time.strftime("%k:%M %d/%m/%Y") %></td>
+          <% end %>
+      </table>
+    </div>
 </section>

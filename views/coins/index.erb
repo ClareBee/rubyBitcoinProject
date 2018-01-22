@@ -1,21 +1,22 @@
 
-<section>
+<section id="added-coins">
+    <h2>Your Favourite Cryptocurrencies</h2>
+    <h3 id="comment">A handy record of ones to watch out for</h3>
 
-  <div>
-    <h1>Your Favourite Cryptocurrencies</h1>
-    <h2>Keep a record of ones to watch out for</h2>
-
-
-
-    <ul>Name
-
+    <ul id="added-coins-list">
+      <h2>Name<h2>
+      <hr>
     <% for coin in @coins %>
 
-    <li><%= coin.name %></li>
-    <% end %>
-    
-    </ul>
+    <li>
+      <%= coin.name %>
+      <form action="/coins/<%=coin.id%>/delete" method="post">
+        <input type="submit" value="Delete" class="btn-delete"/>
+      </form>
+    </li>
 
-  </div>
+    <% end %>
+
+    </ul>
 
 </section>
