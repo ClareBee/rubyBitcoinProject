@@ -4,10 +4,10 @@ A mini-project using Ruby, Sinatra, a Cryptocurrency API and AnyChart
 ![Logo of the project](./welcome.png)
 
 
-# Name of the project
-> Additional information or tag line
+# Cryptonite: a Basic Cryptocurrency Tracker 
+* Features very basic functionality on the back end - ability to add and delete coins 
+* Project could be extended to involve more data analysis and CRUD 
 
-A brief description of your project, what it is used for.
 
 ## Installing / Getting started
 
@@ -31,3 +31,5 @@ Ruby, Sinatra, postgreSQL, AnyChart, hashie, React:Client
 
 ![image of coin data](./bitcoins.png)
 ![image of graph](./graph.png)
+![image of new coins](./newcoins.png)
+![image of coin form](./addcoins.png)
