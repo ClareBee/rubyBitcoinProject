@@ -1,10 +1,11 @@
 # rubyBitcoinProject
-A mini-project using Ruby, Sinatra, a Cryptocurrency API and AnyChart
+A mini-project using Ruby, Sinatra, PostgreSQL, an API and AnyChart
 
 ![Logo of the project](./welcome.png)
 
 
 # Cryptonite: a Basic Cryptocurrency Tracker 
+* A 2-day project to explore making http requests with the Rest Client gem
 * Features very basic functionality on the back end - ability to add and delete coins 
 * Project could be extended to involve more data analysis and CRUD 
 
